@@ -1,14 +1,15 @@
 ---------------------------------------------------
---  Guided_Missile
+-- Pile Pitch
 --
---  Description:  Reduces target's HP to 5% of its maximum value, ignores Utsusemi  ,Bind (30 sec)
---  Type: Magical
+-- Description:
+-- Reduces target's HP to 5% of its maximum value,
+-- ignores Utsusemi, inflicts Bind (30 sec)
+-- Type: Magical
 --
 ---------------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
