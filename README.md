@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/bnetcc/Darkstar-Fork.svg?branch=master)](https://travis-ci.org/bnetcc/Darkstar-Fork)
-[![Build status](https://ci.appveyor.com/api/projects/status/k1v6u054xrmhagn5?svg=true)](https://ci.appveyor.com/project/Ninjistix/darkstar-fork)
+[![Build Status](https://travis-ci.org/bnetcc/BNETccXI.svg?branch=master)](https://travis-ci.org/bnetcc/BNETccXI)
+[![Build status](https://ci.appveyor.com/api/projects/status/u30dx2jnm0rmdtpa?svg=true)](https://ci.appveyor.com/project/Ninjistix/bnetccxi)
 BNETcc's Unoffical Darkstar Project
 ========
 Welcome to BNETcc a Darkstar Project emulated FFXI Private Server.
