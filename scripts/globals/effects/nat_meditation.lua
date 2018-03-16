@@ -1,15 +1,17 @@
 -----------------------------------
---
---
---
+-- Spell: Nature's Meditation
 -----------------------------------
+
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/bluemagic");
 
 -----------------------------------
 -- onEffectGain Action
 -----------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_TERRORRES, 100);
+    target:addMod(MOD_DMGPHYS, 25);
 end;
 
 -----------------------------------
@@ -24,5 +26,5 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_TERRORRES, 100);
+    target:delMod(MOD_DMGPHYS, 25);
 end;

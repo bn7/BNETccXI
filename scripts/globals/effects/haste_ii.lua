@@ -1,15 +1,17 @@
 -----------------------------------
 --
---
+-- 	EFFECT_HASTE_II
 --
 -----------------------------------
+
+require("scripts/globals/status");
 
 -----------------------------------
 -- onEffectGain Action
 -----------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_TERRORRES, 100);
+   target:addMod(MOD_HASTE_MAGIC,effect:getPower());
 end;
 
 -----------------------------------
@@ -24,5 +26,5 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_TERRORRES, 100);
+   target:delMod(MOD_HASTE_MAGIC,effect:getPower());
 end;

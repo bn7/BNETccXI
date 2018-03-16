@@ -1,6 +1,8 @@
 -----------------------------------
 --
+-- EFFECT_LEGION
 --
+-- used in @regen
 --
 -----------------------------------
 
@@ -9,7 +11,9 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_TERRORRES, 100);
+    target:addMod(MOD_REGEN, 6);
+    target:addMod(MOD_REFRESH, 4);
+    target:addMod(MOD_REGAIN, 25);
 end;
 
 -----------------------------------
@@ -24,5 +28,7 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_TERRORRES, 100);
+    target:delMod(MOD_REGEN, 6);
+    target:delMod(MOD_REFRESH, 4);
+    target:delMod(MOD_REGAIN, 25);
 end;

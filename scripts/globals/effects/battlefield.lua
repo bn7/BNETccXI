@@ -12,6 +12,7 @@ function onEffectGain(target,effect)
     if (target:getPet()) then
         target:getPet():addStatusEffect(effect);
     end
+    target:delStatusEffect(EFFECT_LEGION);
 end;
 
 -----------------------------------
@@ -29,6 +30,7 @@ function onEffectLose(target,effect)
     if (target:getPet()) then
         target:getPet():delStatusEffect(EFFECT_BATTLEFIELD);
     end
+    target:delStatusEffect(EFFECT_LEGION);
 end;
 
 -----------------------------------

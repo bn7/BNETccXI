@@ -15,11 +15,13 @@ function onEffectGain(target,effect)
     if (power == 1 or power == 3 or power == 5 or power == 7 or power == 9 or power == 11 or power == 13 or power == 15) then
         -- target:addLatent(LATENT_SIGIL_REGEN, subPower+10, MOD_REGEN, 1);
         -- Not yet implemented
+        target:addMod(MOD_REGEN,1); -- Todo: should be latent
     end
 
     if (power == 2 or power == 3 or power == 6 or power == 7 or power == 10 or power == 11 or power >= 14) then
         -- target:addLatent(LATENT_SIGIL_REFRESH, subPower, MOD_REFRESH, 1);
         -- Not yet implemented
+        target:addMod(MOD_REFRESH,1); -- Todo: should be latent
     end
 
     if (power >= 4 and power <= 7) then
@@ -35,6 +37,12 @@ function onEffectGain(target,effect)
         -- target:addLatent(LATENT_SIGIL_EXPLOSS, ?, MOD_EXPLOSS_REDUCTION, ?);
         -- exp loss reduction not implemented.
     end
+
+    -- Begin Custom stuff
+    if (target:isPC()) then
+        target:addMod(MOD_RERAISE_III,1);
+    end
+    -- End Custom Stuff
 end;
 
 -----------------------------------
@@ -55,11 +63,13 @@ function onEffectLose(target,effect)
     if (power == 1 or power == 3 or power == 5 or power == 7 or power == 9 or power == 11 or power == 13 or power == 15) then
         -- target:delLatent(LATENT_SIGIL_REGEN, subPower+10, MOD_REGEN, 1);
         -- Not yet implemented
+        target:delMod(MOD_REGEN,1); -- Todo: should be latent
     end
 
     if (power == 2 or power == 3 or power == 6 or power == 7 or power == 10 or power == 11 or power >= 14) then
         -- target:delLatent(LATENT_SIGIL_REFRESH, subPower, MOD_REFRESH, 1);
         -- Not yet implemented
+        target:delMod(MOD_REFRESH,1); -- Todo: should be latent
     end
 
     if (effect:getPower() >= 4 and effect:getPower() <= 7) then
@@ -74,4 +84,10 @@ function onEffectLose(target,effect)
         -- target:delMod(MOD_EXPLOSS_REDUCTION), ???);
         -- exp loss reduction not implemented.
     end
+
+    -- Begin Custom stuff
+    if (target:isPC()) then
+        target:delMod(MOD_RERAISE_III,1);
+    end
+    -- End Custom Stuff
 end;

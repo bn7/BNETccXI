@@ -1,15 +1,18 @@
 -----------------------------------
 --
---
+-- EFFECT_DELUGE_SPIKES
 --
 -----------------------------------
+
+require("scripts/globals/status");
 
 -----------------------------------
 -- onEffectGain Action
 -----------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_TERRORRES, 100);
+    target:addMod(MOD_SPIKES, 9);
+    target:addMod(MOD_SPIKES_DMG, effect:getPower());
 end;
 
 -----------------------------------
@@ -24,5 +27,6 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_TERRORRES, 100);
+    target:delMod(MOD_SPIKES, 9);
+    target:delMod(MOD_SPIKES_DMG, effect:getPower());
 end;

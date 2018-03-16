@@ -1,6 +1,6 @@
 -----------------------------------
 --
---
+-- EFFECT_MAGIC_ACC_BOOST_II
 --
 -----------------------------------
 
@@ -9,7 +9,7 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_TERRORRES, 100);
+    target:addMod(MOD_MACC, effect:getPower());
 end;
 
 -----------------------------------
@@ -24,5 +24,5 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_TERRORRES, 100);
+    target:delMod(MOD_MACC, effect:getPower());
 end;

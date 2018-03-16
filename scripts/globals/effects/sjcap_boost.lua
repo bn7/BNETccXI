@@ -1,7 +1,7 @@
 -----------------------------------
---
---
---
+-- 
+-- EFFECT_SJCAP_BOOST
+-- 
 -----------------------------------
 
 -----------------------------------
@@ -9,7 +9,7 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_TERRORRES, 100);
+	target:sjBoost();
 end;
 
 -----------------------------------
@@ -24,5 +24,5 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_TERRORRES, 100);
+	target:sjBoost();
 end;

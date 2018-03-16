@@ -5,6 +5,11 @@
 -----------------------------------
 require("scripts/globals/status");
 
+
+-----------------------------------
+-- onEffectGain Action
+-----------------------------------
+
 function onEffectGain(target,effect)
     --[[
         Retail sends a music change packet (packet ID 0x5F) in both cases.
@@ -19,9 +24,17 @@ function onEffectGain(target,effect)
     end
 end;
 
+-----------------------------------
+-- onEffectTick Action
+-----------------------------------
+
 function onEffectTick(target,effect)
 end;
 
+-----------------------------------
+-- onEffectLose Action
+-----------------------------------
+
 function onEffectLose(target,effect)
-    target:setAnimation(ANIMATION_NONE)
+    target:setAnimation(ANIMATION_NONE);
 end;
