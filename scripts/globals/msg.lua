@@ -51,6 +51,10 @@ msgBasic =
     NONE    = 0, -- Display nothing
     HIT_DMG = 1, -- <actor> hits <target> for <amount> points of damage.
 
+    -- Custom added
+    MELEE                  = 1,   -- Melee substitute skill (Single Target)
+    MELEE_AOE              = 264, -- Melee substitute skill (Area of Effect)
+
     -- Magic
     MAGIC_DMG              = 2,   -- <caster> casts <spell>. <target> takes <amount> damage.
     MAGIC_RECOVERS_HP      = 7,   -- <caster> casts <spell>. <target> recovers <amount> HP.

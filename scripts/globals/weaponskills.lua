@@ -32,6 +32,7 @@ SPECEFFECT_CRITICAL_HIT = 0x22
 
 -- params contains: ftp100, ftp200, ftp300, str_wsc, dex_wsc, vit_wsc, int_wsc, mnd_wsc, canCrit, crit100, crit200, crit300, acc100, acc200, acc300, ignoresDef, ignore100, ignore200, ignore300, atkmulti, kick
 function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taChar, params)
+  if (params == nil) then print(string.format("nil params on wsID %d",wsID)) end
     local criticalHit = false;
     local bonusTP = 0;
     if (params.bonusTP ~= nil) then
@@ -276,6 +277,7 @@ end;
 --         ele (ELE_FIRE), skill (SKILL_STF), includemab = true
 
 function doMagicWeaponskill(attacker, target, wsID, tp, primary, action, params)
+  if (params == nil) then print(string.format("nil params on wsID %d",wsID)) end
     local bonusTP = 0;
     if (params.bonusTP ~= nil) then
         bonusTP = params.bonusTP;
@@ -726,6 +728,7 @@ end;
 
  -- params contains: ftp100, ftp200, ftp300, str_wsc, dex_wsc, vit_wsc, int_wsc, mnd_wsc, canCrit, crit100, crit200, crit300, acc100, acc200, acc300, ignoresDef, ignore100, ignore200, ignore300, atkmulti
  function doRangedWeaponskill(attacker, target, wsID, params, tp, primary, action)
+  if (params == nil) then print(string.format("nil params on wsID %d",wsID)) end
     local bonusTP = 0;
     if (params.bonusTP ~= nil) then
         bonusTP = params.bonusTP;
@@ -1027,6 +1030,23 @@ function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, sl
         defender:addEnmity(enmityEntity, params.overrideCE, params.overrideVE)
     else
         local enmityMult = params.enmityMult or 1
+
+        -- Custom enmity modification, PLD ws more hate, everyone else (except NIN) slightly less.
+        if (enmityMult > 1 or enmityEntity:getMainJob() == JOBS.PLD) then
+            enmityMult = enmityMult*1.25;
+        elseif (enmityEntity:getMainJob() ~= JOBS.NIN) then -- TODO: exempt trick attack as well?
+            enmityMult = enmityMult*0.8;
+        end
+
+        -- Temp debug block
+        if ((finaldmg * enmityMult) > 65535 or (finaldmg * enmityMult) < 1) then
+            print("ws enmityMult overflow/underflow! Tell Teo!");
+        end
+        if (enmityMult == 0) then
+            print("ws enmityMult zero! Tell Teo!");
+        end
+        -- debugWeaponskillDamageEnmity(enmityEntity,defender,finaldmg,enmityMult)
+
         defender:updateEnmityFromDamage(enmityEntity, finaldmg * enmityMult)
     end
 
@@ -1170,3 +1190,19 @@ function shadowAbsorb(target)
     end
     return false
 end
+
+-- Big huge pile of debug code, replicating a lot of core shit to be less spammy than a core print..
+function debugWeaponskillDamageEnmity(player,mob,dmg,multiplier)
+    local levelMod;
+    if (mob == nil) then
+        levelMod = utils.clamp(player:getMainLvl(), 0, 99); -- same as "default fallback" in core
+    else
+        levelMod = utils.clamp(mob:getMainLvl(), 0, 99); -- core says "correct mod value"
+    end
+    levelMod = ((31*levelMod)/50)+6; -- And this is the math core does to it..
+
+    local CE = (80 / levelMod * dmg);
+    local VE = (240 / levelMod * dmg);
+
+    print("[EnmityFromDamage-WS]\n Player: "..player:getName().."\t Mob: "..mob:getName().."\n CE: "..CE.."\t VE: "..VE.."\n WeaponSkill ".."\t\t Dmg: "..dmg.."\n levelMod: "..levelMod.."\t\t multiplier: "..multiplier);
+end;

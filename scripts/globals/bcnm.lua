@@ -43,7 +43,8 @@ itemid_bcnmid_map =
     206, {0, 0}, -- Qu'Bia Arena
     207, {1544, 545}, -- Cloister of Flames
     209, {1169, 577, 1547, 578}, -- Cloister of Tremors
-    211, {1549, 609} -- Cloister of Tides
+    211, {1549, 609}, -- Cloister of Tides
+    255, {3924,1308} -- Abyssea Empyreal Paradox (Custom Shinryu)
 }
 
 -- [zoneId] = {bcnm, ids, in, order}
@@ -99,6 +100,7 @@ battlefield_bitmask_map =
     [207] = {544,545,546,547},
     [209] = {576,577,578,579,580},
     [211] = {608,609,610,611},
+    [255] = {1308,0} -- Abyssea Empyreal Paradox (Retail Shinryu)
 };
 
 -- Call this onTrade for burning circles
@@ -292,7 +294,7 @@ function EventFinishBCNM(player, csid, option)
         local id = player:getVar("trade_bcnmid")
         local item = player:getVar("trade_itemid")
 
-        if (id == 68 or id == 418 or id == 450 or id == 482 or id == 545 or id == 578 or id == 609 or id == 293) then
+        if (id == 68 or id == 418 or id == 450 or id == 482 or id == 545 or id == 578 or id == 609 or id == 293 or id == 1308) then
             player:tradeComplete() -- Removes the item
         elseif ((item >= 1426 and item <= 1440) or item == 1130 or item == 1131 or item == 1175 or item == 1177 or item == 1180 or item == 1178 or item == 1551 or item == 1552 or item == 1553) then -- Orb and Testimony (one time item)
             player:createWornItem(item)
@@ -424,6 +426,8 @@ function ItemToBCNMID(player, zone, trade)
                         questTimelineOK = 1
                     elseif (item == 1174 and player:getVar("CarbuncleDebacleProgress") == 6) then -- Carbuncle Debacle (Ogmios)
                         questTimelineOK = 1
+                    elseif (item == 3924) then -- The Wyrm God (Shinryu Fight)
+                        questTimelineOK = 1;
                     end
 
                     if (questTimelineOK == 1) then
@@ -560,14 +564,17 @@ function checkNonTradeBCNM(player, npc, mode)
         [201] = {
                     [416] = function() return (player:hasKeyItem(TUNING_FORK_OF_WIND))  end, -- Trial by Wind
                     [420] = function() return (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_EMERALD_SEAL))  end,
+                    [421] = function() return (player:hasKeyItem(AVATAR_PHANTOM_GEM))  end, -- HTB Trial by Wind
                 },
         [202] = {
                     [448] = function() return (player:hasKeyItem(TUNING_FORK_OF_LIGHTNING))  end, -- Trial by Lightning
                     [452] = function() return (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_VIOLET_SEAL))  end,
+                    [453] = function() return (player:hasKeyItem(AVATAR_PHANTOM_GEM))  end, -- HTB Trial by Lightning
                },
         [203] = {
                     [480] = function() return (player:hasKeyItem(TUNING_FORK_OF_ICE))  end, -- Trial by Ice
                     [484] = function() return (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_AZURE_SEAL))  end,
+                    [485] = function() return (player:hasKeyItem(AVATAR_PHANTOM_GEM))  end, -- HTB Trial by Ice
                 },
         [206] = {
                     [512] = function() return (player:getCurrentMission(player:getNation()) == 14 and player:getVar("MissionStatus") == 11)  end, -- Mission 5-1
@@ -580,14 +587,17 @@ function checkNonTradeBCNM(player, npc, mode)
         [207] = {
                     [544] = function() return (player:hasKeyItem(TUNING_FORK_OF_FIRE))  end, -- Trial by Fire
                     [547] = function() return (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_SCARLET_SEAL))  end,
+                    [548] = function() return (player:hasKeyItem(AVATAR_PHANTOM_GEM))  end, -- HTB Trial by Fire
                 },
         [209] = {
                     [576] = function() return (player:hasKeyItem(TUNING_FORK_OF_EARTH))  end, -- Trial by Earth
                     [580] = function() return (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_AMBER_SEAL))  end,
+                    [576] = function() return (player:hasKeyItem(AVATAR_PHANTOM_GEM))  end, -- HTB Trial by Earth
                },
         [211] = {
                     [608] = function() return (player:hasKeyItem(TUNING_FORK_OF_WATER))  end, -- Trial by Water
                     [611] = function() return (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_CERULEAN_SEAL))  end,
+                    [612] = function() return (player:hasKeyItem(AVATAR_PHANTOM_GEM))  end, -- HTB Trial by Water
                 },
     }
 
