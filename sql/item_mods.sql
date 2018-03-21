@@ -31806,7 +31806,6 @@ INSERT INTO `item_mods` VALUES (25949,1,70); -- def Inyan. Crackows +2
 INSERT INTO `item_mods` VALUES (25949,2,25); -- hp
 INSERT INTO `item_mods` VALUES (25949,5,30); -- MP
 INSERT INTO `item_mods` VALUES (25949,8,6); -- str
-INSERT INTO `item_mods` VALUES (25793,9,6); -- dex
 INSERT INTO `item_mods` VALUES (25949,10,14); -- vit
 INSERT INTO `item_mods` VALUES (25949,11,33); -- agi
 INSERT INTO `item_mods` VALUES (25949,12,32); -- int
@@ -31816,7 +31815,7 @@ INSERT INTO `item_mods` VALUES (25949,68,60); -- eva
 INSERT INTO `item_mods` VALUES (25949,31,147); -- ma ev
 INSERT INTO `item_mods` VALUES (25949,29,8); -- mdb
 INSERT INTO `item_mods` VALUES (25949,384,20); -- haste
-INSERT INTO `item_mods` VALUES (25949,163,-3); -- Magic damage taken 
+INSERT INTO `item_mods` VALUES (25949,163,-3); -- Magic damage taken
 INSERT INTO `item_mods` VALUES (25950,1,90); -- def
 INSERT INTO `item_mods` VALUES (25950,8,31); -- str
 INSERT INTO `item_mods` VALUES (25950,9,27); -- dex
