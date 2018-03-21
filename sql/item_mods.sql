@@ -29811,6 +29811,24 @@ INSERT INTO `item_mods` VALUES (23665,29,6);      -- Magic Defense+6
 INSERT INTO `item_mods` VALUES (23665,31,99);     -- Magic Evasion+99
 INSERT INTO `item_mods` VALUES (23665,68,112);    -- Evasion+112
 INSERT INTO `item_mods` VALUES (23665,384,40);    -- Haste +40
+INSERT INTO `item_mods` VALUES (25574,1,123); -- def Sulevia's Mask +2
+INSERT INTO `item_mods` VALUES (25574,2,40); -- hp
+INSERT INTO `item_mods` VALUES (25574,5,40); -- MP
+INSERT INTO `item_mods` VALUES (25574,8,33); -- str
+INSERT INTO `item_mods` VALUES (25574,9,19); -- dex
+INSERT INTO `item_mods` VALUES (25574,10,40); -- vit
+INSERT INTO `item_mods` VALUES (25574,11,12); -- agi
+INSERT INTO `item_mods` VALUES (25574,12,11); -- int
+INSERT INTO `item_mods` VALUES (25574,13,22); -- mnd
+INSERT INTO `item_mods` VALUES (25574,14,22); -- chr
+INSERT INTO `item_mods` VALUES (25574,25,44); -- acc
+INSERT INTO `item_mods` VALUES (25574,23,48); -- atk
+INSERT INTO `item_mods` VALUES (25574,68,27); -- eva
+INSERT INTO `item_mods` VALUES (25574,31,43); -- ma ev
+INSERT INTO `item_mods` VALUES (25574,29,1); -- mdb
+INSERT INTO `item_mods` VALUES (25574,384,30); -- haste
+INSERT INTO `item_mods` VALUES (25574,73,10); -- Store TP
+INSERT INTO `item_mods` VALUES (25574,160,-6); -- Damage Taken -
 INSERT INTO `item_mods` VALUES (25579,1,113);     -- flamma_zucchetto DEF:113
 INSERT INTO `item_mods` VALUES (25579,2,80);      -- HP+80
 INSERT INTO `item_mods` VALUES (25579,5,20);      -- MP+20
@@ -30577,6 +30595,24 @@ INSERT INTO `item_mods` VALUES (25789,73,7);      -- Store TP+7
 INSERT INTO `item_mods` VALUES (25789,165,10);    -- Crit Hit Rate+10
 INSERT INTO `item_mods` VALUES (25789,246,90);    -- Resist Petrify+90
 INSERT INTO `item_mods` VALUES (25789,384,40);    -- Haste +40
+INSERT INTO `item_mods` VALUES (25790,1,153); -- def Sulevia's Plate. +2
+INSERT INTO `item_mods` VALUES (25790,2,70); -- hp
+INSERT INTO `item_mods` VALUES (25790,5,70); -- MP
+INSERT INTO `item_mods` VALUES (25790,8,41); -- str
+INSERT INTO `item_mods` VALUES (25790,9,24); -- dex
+INSERT INTO `item_mods` VALUES (25790,10,41); -- vit
+INSERT INTO `item_mods` VALUES (25790,11,16); -- agi
+INSERT INTO `item_mods` VALUES (25790,12,16); -- int
+INSERT INTO `item_mods` VALUES (25790,13,27); -- mnd
+INSERT INTO `item_mods` VALUES (25790,14,27); -- chr
+INSERT INTO `item_mods` VALUES (25790,25,46); -- acc
+INSERT INTO `item_mods` VALUES (25790,62,50); -- atk
+INSERT INTO `item_mods` VALUES (25790,68,36); -- eva
+INSERT INTO `item_mods` VALUES (25790,31,59); -- ma ev
+INSERT INTO `item_mods` VALUES (25790,29,3); -- mdb
+INSERT INTO `item_mods` VALUES (25790,384,10); -- haste
+INSERT INTO `item_mods` VALUES (25790,175,7); -- Skill Chain Damage
+INSERT INTO `item_mods` VALUES (25790,160,-9); -- Damage Taken -
 INSERT INTO `item_mods` VALUES (25802,1,88);      -- meghanada_gloves DEF:88
 INSERT INTO `item_mods` VALUES (25802,2,30);      -- HP+30
 INSERT INTO `item_mods` VALUES (25802,8,15);      -- STR+15
@@ -30881,6 +30917,22 @@ INSERT INTO `item_mods` VALUES (25823,31,48);     -- Magic Evasion+48
 INSERT INTO `item_mods` VALUES (25823,68,19);     -- Evasion+19
 INSERT INTO `item_mods` VALUES (25823,311,49);    -- Magic Damage+49
 INSERT INTO `item_mods` VALUES (25823,384,40);    -- Haste +40
+INSERT INTO `item_mods` VALUES (25828,1,111); -- def Sulev. Gauntlets +2
+INSERT INTO `item_mods` VALUES (25828,2,30); -- hp
+INSERT INTO `item_mods` VALUES (25828,5,30); -- MP
+INSERT INTO `item_mods` VALUES (25828,8,23); -- str
+INSERT INTO `item_mods` VALUES (25828,9,34); -- dex
+INSERT INTO `item_mods` VALUES (25828,10,45); -- vit
+INSERT INTO `item_mods` VALUES (25828,12,6); -- int
+INSERT INTO `item_mods` VALUES (25828,13,32); -- mnd
+INSERT INTO `item_mods` VALUES (25828,14,27); -- chr
+INSERT INTO `item_mods` VALUES (25828,25,43); -- acc
+INSERT INTO `item_mods` VALUES (25828,23,47); -- atk
+INSERT INTO `item_mods` VALUES (25828,68,16); -- eva
+INSERT INTO `item_mods` VALUES (25828,31,37); -- ma ev
+INSERT INTO `item_mods` VALUES (25828,384,30); -- haste
+INSERT INTO `item_mods` VALUES (25828,288,6); -- Double Attack
+INSERT INTO `item_mods` VALUES (25828,160,-5); -- Damage Taken -
 INSERT INTO `item_mods` VALUES (25853,1,105);     -- Querkening Brais: DEF 105
 INSERT INTO `item_mods` VALUES (25853,2,43);      -- HP +43
 INSERT INTO `item_mods` VALUES (25853,5,29);      -- MP +29
@@ -31169,6 +31221,23 @@ INSERT INTO `item_mods` VALUES (25878,68,24);     -- Evasion+24
 INSERT INTO `item_mods` VALUES (25878,311,55);    -- Magic Damage+55
 INSERT INTO `item_mods` VALUES (25878,384,40);    -- Haste +40
 INSERT INTO `item_mods` VALUES (25878,487,5);     -- Magic Burst Damage+5
+INSERT INTO `item_mods` VALUES (25879,1,135); -- def Sulev. Cuisses +2
+INSERT INTO `item_mods` VALUES (25879,2,50); -- hp
+INSERT INTO `item_mods` VALUES (25879,5,50); -- MP
+INSERT INTO `item_mods` VALUES (25879,8,47); -- str
+INSERT INTO `item_mods` VALUES (25879,10,33); -- vit
+INSERT INTO `item_mods` VALUES (25879,11,14); -- agi
+INSERT INTO `item_mods` VALUES (25879,12,24); -- int
+INSERT INTO `item_mods` VALUES (25879,13,20); -- mnd
+INSERT INTO `item_mods` VALUES (25879,14,18); -- chr
+INSERT INTO `item_mods` VALUES (25879,25,45); -- acc
+INSERT INTO `item_mods` VALUES (25879,23,49); -- atk
+INSERT INTO `item_mods` VALUES (25879,68,16); -- eva
+INSERT INTO `item_mods` VALUES (25879,31,75); -- ma ev
+INSERT INTO `item_mods` VALUES (25879,29,2); -- mdb
+INSERT INTO `item_mods` VALUES (25879,384,20); -- haste
+INSERT INTO `item_mods` VALUES (25879,302,4); -- Triple Attack
+INSERT INTO `item_mods` VALUES (25879,160,-7); -- Damage Taken -
 INSERT INTO `item_mods` VALUES (25927,1,68);      -- meg._jambeaux DEF:68
 INSERT INTO `item_mods` VALUES (25927,2,20);      -- HP+20
 INSERT INTO `item_mods` VALUES (25927,8,15);      -- STR+15
@@ -31438,6 +31507,23 @@ INSERT INTO `item_mods` VALUES (25945,68,60);     -- Evasion+60
 INSERT INTO `item_mods` VALUES (25945,311,46);    -- Magic Damage+46
 INSERT INTO `item_mods` VALUES (25945,384,20);    -- Haste +20
 INSERT INTO `item_mods` VALUES (25945,516,10);    -- Converts Dmg to MP+10
+INSERT INTO `item_mods` VALUES (25946,1,93); -- def Sulev. Leggings +2
+INSERT INTO `item_mods` VALUES (25946,2,20); -- hp
+INSERT INTO `item_mods` VALUES (25946,5,20); -- MP
+INSERT INTO `item_mods` VALUES (25946,8,29); -- str
+INSERT INTO `item_mods` VALUES (25946,9,19); -- dex
+INSERT INTO `item_mods` VALUES (25946,10,29); -- vit
+INSERT INTO `item_mods` VALUES (25946,11,26); -- agi
+INSERT INTO `item_mods` VALUES (25946,13,18); -- mnd
+INSERT INTO `item_mods` VALUES (25946,14,32); -- chr
+INSERT INTO `item_mods` VALUES (25946,25,42); -- acc
+INSERT INTO `item_mods` VALUES (25946,23,46); -- atk
+INSERT INTO `item_mods` VALUES (25946,68,44); -- eva
+INSERT INTO `item_mods` VALUES (25946,31,75); -- ma ev
+INSERT INTO `item_mods` VALUES (25946,29,1); -- mdb
+INSERT INTO `item_mods` VALUES (25946,384,10); -- haste
+INSERT INTO `item_mods` VALUES (25946,841,7); -- Weapon Skill Damage
+INSERT INTO `item_mods` VALUES (25946,160,-4); -- Damage Taken -
 INSERT INTO `item_mods` VALUES (26003,28,13);   -- Baetyl pendant: Magic attack bonus +13
 INSERT INTO `item_mods` VALUES (26003,170,4);   -- Fast cast +4%
 INSERT INTO `item_mods` VALUES (26016,111,10);    -- Incanter's Torque: Divine magic skill +10
